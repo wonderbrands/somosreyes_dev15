@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Usuario Responsable de administración de los costos de envio-->
+        <record id="group_shipping_cost" model="res.groups">
+            <field name="name">Shipping Cost Manager</field>
+            <field name="comment">Usuario Ressponsable de Precios de envío de los Market Places </field>
+        </record>
+
+    </data>
+</odoo>

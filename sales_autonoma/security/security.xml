@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="group_sales_autonoma" model="res.groups">
+            <field name="name">Sales Autonoma Manager</field>
+            <field name="comment">Usuario Responsable del Automatización de ordenes de Venta</field>
+        </record>
+
+        <record id="base.group_user" model="res.groups">
+            <field name="name">Sales Autonoma Todos</field>
+            <field name="comment">Usuario del Automatización de ordenes de Venta</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Usuario Responsable de Asignación de Precios Markets-->
+        <record id="group_inv_history" model="res.groups">
+            <field name="name">Inventory History Manager</field>
+            <field name="comment">Usuario Responsable del Historico de Invnetario</field>
+        </record>
+    </data>
+</odoo>

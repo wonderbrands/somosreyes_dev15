@@ -1,0 +1,63 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="ubi_products.list">
+      <field name="name">ubi_products list</field>
+      <field name="model">ubi_products</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="ubicacion"/>
+        </tree>
+      </field>
+    </record>
+    
+     <record model="ir.ui.view" id="ubi_products.form">
+      <field name="name">ubi_products form</field>
+      <field name="model">ubi_products</field>
+      <field name="arch" type="xml">
+        <form>
+              <group name="ubicacion" >
+                <field name="ubicacion" style="width:25%%"/>
+              </group>
+        </form>
+      </field>
+    </record>
+    
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="ubi_products.action_window">
+      <field name="name">Ubicaciones Somos Reyes</field>
+      <field name="res_model">ubi_products</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+ 
+    <record model="ir.actions.server" id="ubi_products.action_server">
+      <field name="name">Ubicaciones Somos Reyes</field>
+      <field name="model_id" ref="model_ubi_products"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+
+
+    <!-- Top menu item -->
+    <menuitem name="Ubicaciones de Almacén" id="ubi_products.menu_root"/>
+
+    <!-- menu categories -->
+    <menuitem name="Lista de Ubicaciones" id="ubi_products.menu_1" parent="ubi_products.menu_root"/>
+
+    <!-- actions -->
+    <menuitem name="Ver Lista" id="ubi_products.menu_1_list" parent="ubi_products.menu_1" action="ubi_products.action_window"/>
+
+  </data>
+</odoo>

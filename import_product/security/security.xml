@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Usuario Responsable de Asignación de campos de Importación comercial-->
+        <record id="group_import_product" model="res.groups">
+            <field name="name">Importacion Comercial Manager</field>
+            <field name="comment">Usuario Responsable campos de Importación comercial </field>
+        </record>
+
+        <!-- Usuario Lectura de IDs Markets-->
+        <record id="base.group_user" model="res.groups">
+            <field name="name">Importacion Comercial Todos</field>
+            <field name="comment">Usuario Lectura datos Importacion Comercial Todos</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_purchase_vqty_purchase_vqty,purchase_vqty.purchase_vqty,model_purchase_vqty_purchase_vqty,,1,0,0,0

@@ -1,0 +1,16 @@
+<odoo>
+  <data>
+    <!--- Intentando cambiar el color del boton de confirmar, no funciono.
+    <record  id="sales_vqty_form_inherit" model="ir.ui.view">         
+      <field name="name">sales_vqty_inherit</field>
+      <field name="model">sale.order</field>
+      <field name="inherit_id" ref="sale.view_order_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//button[@name='action_confirm']" position="replace">
+          <button name="action_confirm" class="btn btn-danger"/>
+        </xpath>   
+      </field>
+    </record>
+  -->
+  </data>
+</odoo>

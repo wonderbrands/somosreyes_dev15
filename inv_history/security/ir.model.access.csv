@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_group_inv_history,Inventory History Manager,model_sub_history_lines,group_inv_history,1,1,1,1
+access_group_inv_history_Todos,Inventory History Manager Todos,model_sub_history_lines,base.group_user,1,0,0,0

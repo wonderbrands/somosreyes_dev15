@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_MarketPlaces_Prices,MarketPlaces_Prices Responsable,model_sub_price_lines,group_marketplaces_prices,1,1,1,1
+access_MarketPlaces_Prices_Read,MarketPlaces_Prices_Read Usuario,model_sub_price_lines,group_marketplaces_prices_read,1,0,0,0
+access_MarketPlaces_Prices_Todos,MarketPlaces_Prices_Todos Todos,model_sub_price_lines,base.group_user,1,0,0,0

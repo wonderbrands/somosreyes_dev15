@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="inv_history_template_form_view" model="ir.ui.view">
+        <field name="name">inv.history.form.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[2]" position="after" >
+                <page name="historicos" string="Historicos Inventario" groups="stock.group_stock_manager">
+                    <field name="sub_history_line_ids" nolabel="1">
+                        <tree string="History lines" editable="bottom">
+                            <field name="origen"/>
+                            <field name="ubicacion"/>
+                            <field name="fecha_movimiento"/>
+                            <field name="cantidad_entrada"/>
+                            <field name="cantidad_salida"/>
+                            <field name="usuario"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

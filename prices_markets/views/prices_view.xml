@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="price_kit_product_template_form_view" model="ir.ui.view">
+        <field name="name">product.template.price.form.inherit</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <header>
+                <button string="Actualizar Precios" type="object" name="actualizar_precio_venti"/>
+            </header>
+
+            <xpath expr="//page[2]" position="after" >
+
+                <page name="prices" string="Precios Markets" groups="stock.group_stock_manager">
+                    <field name="sub_price_line_ids" nolabel="1">
+                        <tree string="Prices lines" editable="bottom">
+                            <field name="name_marketplace"/>
+                            <field name="fee_marketplace"/>
+                            <field name="extra_marketplace"/>
+                            <field name="shipping_price"/>
+                            <field name="min_price_to_post" />
+                            <field name="margen_ganancia"/>
+                            <field name="min_suggested_price"/>
+                            <field name="recommended_price"/>
+                            <field name="competition_price"/>
+                            <field name="marketplace_price"/>
+                        </tree>
+                    </field>
+                </page>
+
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

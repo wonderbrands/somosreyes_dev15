@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="mlm_product.list">
+      <field name="name">mlm_product list</field>
+      <field name="model">mlm_product</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="default_code"/>
+          <field name="marketplace"/>
+          <field name="market_identificator"/>
+          <field name="account_indentificator"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="mlm_product.action_window">
+      <field name="name">Identificadores de Productos en los Marketplaces</field>
+      <field name="res_model">mlm_product</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+
+    <record model="ir.actions.server" id="mlm_product.action_server">
+      <field name="name">mlm_product server</field>
+      <field name="model_id" ref="model_mlm_product"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+
+
+    <!-- Top menu item -->
+
+    <menuitem name="Markets IDs" id="mlm_product.menu_root" web_icon="mlm_product,static/description/icon.png"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Markets Productos Ids" id="mlm_product.menu_1" parent="mlm_product.menu_root"/>
+
+    <!-- actions -->
+
+    <menuitem name="Lista" id="mlm_product.menu_1_list" parent="mlm_product.menu_1" action="mlm_product.action_window"/>
+    <!-- 
+    <menuitem name="Server to list" id="mlm_product" parent="mlm_product.menu_2" action="mlm_product.action_server"/>
+    -->
+
+  </data>
+</odoo>

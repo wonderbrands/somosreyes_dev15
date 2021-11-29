@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_group_mlm_product,MarketIdsProducts Manager,model_mlm_product,group_mlm_product,1,1,1,1
+access_group_mlm_product_Todos,MarketIdsProducts Todos,model_mlm_product,base.group_user,1,0,0,0

@@ -1,0 +1,112 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="codebar_pr.form">
+      <field name="name">Productos Operación Form</field>
+      <field name="model">codebar_pr</field>
+      <field name="arch" type="xml">
+       <form >
+            <group  >
+            <field name="imagen_producto" nolabel="1" widget="image" class="oe_avatar oe_left"/>
+            </group  >
+            <group >
+            <field string="Operación" name="operacion" />
+            </group>
+
+            <group  >
+            <field string="UPC" name="upc" />
+            </group>
+
+            <group  >
+            <field string="Producto" name="nombre_producto" />
+            </group>
+
+            <group  >
+            <field string="Cantidad Pedida" name="cantidad_pedida" readonly="0" />
+            </group>
+            <group  >
+            <field string="Cantidad Disponible" name="cantidad_disponible" readonly="0"  />
+            </group>
+            <group  >
+            <field string="Cantidad Hecha" name="cantidad_hecha" readonly="0" />
+            </group>
+
+            <group  >
+            <field string="Fecha" name="fecha_operacion" readonly="1" />
+            </group>
+
+            <!--
+            <group>
+            <button name="update_operation" string="Actualiza Operacion" type="object" class="btn-primary"/>
+            </group>
+            -->
+        </form>
+      </field>
+    </record>
+   
+   
+    <!-- explicit list view definition -->
+    
+    <record model="ir.ui.view" id="codebar_pr.list">
+      <field name="name">Productos Operación list</field>
+      <field name="model">codebar_pr</field>
+      <field name="arch" type="xml">
+       <tree string="Operaciones">
+            <field name="imagen_producto" nolabel="1" widget="image" />
+            <field name="operacion" />
+            <field name="upc" />
+            <field name="nombre_producto" />
+            <field name="cantidad_pedida"  />
+            <field name="cantidad_disponible"  />
+            <field name="cantidad_hecha"  />
+            <field name="fecha_operacion"  />
+            <!--<button name="update_operation" string="Actualiza Operacion" type="object" class="btn-primary"/>-->
+            
+        </tree>
+      </field>
+    </record>
+
+   
+    <!-- actions opening views on models -->
+    
+    <record model="ir.actions.act_window" id="codebar_pr.action_window">
+      <field name="name">Productos Operación</field>
+      <field name="res_model">codebar_pr</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    
+
+        <!-- server action to the one above -->
+    
+    <record model="ir.actions.server" id="codebar_pr.action_server">
+      <field name="name">Productos Operación  server</field>
+      <field name="model_id" ref="model_codebar_pr"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    
+
+    <!-- Top menu item -->
+    
+    <menuitem name="Productos Operación  list" id="codebar_pr.menu_root"/>
+
+    <!-- menu categories -->
+    
+    <menuitem name="Productos Operación  list" id="codebar_pr.menu_1" parent="codebar_pr.menu_root"/>
+
+    
+    <!-- actions -->
+    
+    <menuitem name="Lista Productos Operación " id="codebar_pr.menu_1_list" parent="codebar_pr.menu_1" action="codebar_pr.action_window"/>
+  
+    
+  </data>
+</odoo>
+
+

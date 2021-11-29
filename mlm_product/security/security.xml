@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="group_mlm_product" model="res.groups">
+            <field name="name">MarketIdsProducts Manager</field>
+            <field name="comment">Usuario Responsable de los identificadores de Productos en los Marketplaces</field>
+        </record>
+
+        <record id="base.group_user" model="res.groups">
+            <field name="name">MarketIdsProducts Todos</field>
+            <field name="comment">Usuario de los identificadores de Productos en los Marketplaces</field>
+        </record>
+
+    </data>
+</odoo>

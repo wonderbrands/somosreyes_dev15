@@ -1,0 +1,3 @@
+d,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_group_sales_autonoma,Sales Autonoma Manager,model_sales_autonoma,group_sales_autonoma,1,1,1,1
+access_group_sales_autonoma_Todos,Sales Autonoma Todos,model_sales_autonoma,base.group_user,1,0,0,0

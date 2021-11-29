@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Usuario Responsable de Asignación de Precios Markets-->
+        <record id="group_marketplaces_prices" model="res.groups">
+            <field name="name">MarketPlaces_Prices</field>
+            <field name="comment">Usuario Ressponsable de Precios en Market Places </field>
+        </record>
+
+        <!-- Usuario Lectura de Precios Markets-->
+        <record id="group_marketplaces_prices_read" model="res.groups">
+            <field name="name">MarketPlaces_Prices_Read</field>
+            <field name="comment">Usuario Lectura Precios en Market Places </field>
+        </record>
+    </data>
+</odoo>

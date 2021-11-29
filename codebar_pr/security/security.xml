@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="group_codebar_pr" model="res.groups">
+            <field name="name">CodeBarProducto Manager</field>
+            <field name="comment">Manager Producto Operacion</field>
+        </record>
+
+        <record id="base.group_user" model="res.groups">
+            <field name="name">CodeBarProducto Todos</field>
+            <field name="comment">Usuario Producto Operacion</field>
+        </record>
+
+    </data>
+</odoo>

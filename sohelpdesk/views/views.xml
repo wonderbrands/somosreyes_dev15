@@ -1,0 +1,15 @@
+<odoo>
+  <data>
+    <record  id="sohelpdesk_form_inherit" model="ir.ui.view">         
+      <field name="name">sohelpdesk_inherit</field>
+      <field name="model">helpdesk.ticket</field>
+      <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+      <field name="arch" type="xml">
+        <field name="priority" position="after">
+          <field name="so_name" />
+          <field name="ordermp_id" />
+        </field>        
+      </field>
+    </record>
+  </data>
+</odoo>

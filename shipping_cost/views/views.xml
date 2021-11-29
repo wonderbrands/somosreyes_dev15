@@ -1,0 +1,65 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="shipping_cost.list">
+      <field name="name">shipping_cost_list</field>
+      <field name="model">shipping_cost</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name_marketplace"/>
+          <field name="name_seller"/>
+          <field name="peso_volumetrico_inferior"/>
+          <field name="peso_volumetrico_superior"/>
+          <field name="shipping_price"/>
+          <field name="descuento_fullfilment"/>
+          <field name="descuento_otros"/>
+          <field name="precio_minimo"/>
+          <field name="descuento_x_precio_minimo"/>
+          <field name="descuento_x_precio_maximo"/>
+          <field name="asegurado"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+    
+    <record model="ir.actions.act_window" id="shipping_cost.action_window">
+      <field name="name">Costos de Envío</field>
+      <field name="res_model">shipping_cost</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    
+
+    <!-- server action to the one above -->
+    
+    <record model="ir.actions.server" id="shipping_cost.action_server">
+      <field name="name">shipping_cost server</field>
+      <field name="model_id" ref="model_shipping_cost"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+        }
+      </field>
+    </record>
+  
+
+    <!-- Top menu item -->
+    
+    <menuitem name="Costos de Envío" id="shipping_cost.menu_root" groups="base.group_user"/> <!-- ,  -->
+  
+    <!-- menu categories -->
+    
+    <menuitem name="Lista Costos de Envío" id="shipping_cost.menu_1" parent="shipping_cost.menu_root"/>
+   
+    <!-- actions -->
+    
+    <menuitem name="Lista" id="shipping_cost.menu_1_list" parent="shipping_cost.menu_1"
+              action="shipping_cost.action_window"/>
+
+
+  </data>
+</odoo>
