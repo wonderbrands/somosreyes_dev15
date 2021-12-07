@@ -20,21 +20,25 @@
                 <field name="costo_envio_oficiales"/>
               </group>    
           </xpath>
-          
-          <field name="categ_id" position="after">
-              <field name="categoria_id"/>
-          </field>
-
-          <field name="list_price" position="after">
-              <field name="factor_precio_minimo"/> 
-              <field name="precio_minimo"/>
-              <field name="activar_bot"/>
-              <field name="precio_venta_recomendado"/>
-              <field name="precio_con_iva"/>
-              <field name="costo_anterior"/>
-              <field name="costo_dolares"/>
-          </field>
-
+          <xpath expr="//group[@name='group_standard_price']" position="after">
+              <group string="Market">
+                  <field name="categ_id" position="after">
+                      <field name="categoria_id"/>
+                  </field>
+              </group>
+              <group string="Costos y Precios">
+                      <field name="factor_precio_minimo"/>
+                      <field name="precio_minimo"/>
+                      <field name="activar_bot"/>
+                      <field name="precio_venta_recomendado"/>
+                      <field name="precio_con_iva"/>
+                      <field name="costo_anterior"/>
+                      <field name="costo_dolares"/>
+              </group>
+              <group string="Costo sugerido Marketplace">
+                      <field name="cost_pp" widget='monetary'/>
+              </group>
+          </xpath>
           <notebook>
             <page name="stock" string="Stock">
               <group string="Stock Proveedores">

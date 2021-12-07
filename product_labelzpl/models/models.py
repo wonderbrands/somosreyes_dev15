@@ -52,6 +52,9 @@ class product_stock(models.Model):
     sin_fecha_llegada = fields.Boolean (string="Sin fecha de llegada")
     stock_reservado = fields.Integer(string="Stock Reservado",  help="Cantidad de Piezas vendidas hoy")
     factor_precio_minimo = fields.Float(   string='Factor precio mínimo', help="1.20, 1.30...etc" )
+
+    #NEW FIELDS
+    cost_pp = fields.Float(string='Costo PP', help="Campo con costo pronto pago. Aplica para descuentos financieros por pago")
    
     #@api.multi
     def imprimir_zpl(self):
